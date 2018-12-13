@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="layui/css/layui.css"  media="all">
+		<script src="layui/layui.js"></script>
+		<title>Login</title>
+		<style type="text/css">
+			#bg_main{
+				background-image :url("images/bg_Capgemini_new.png");
+				display: block;
+				position: absolute;
+				background-repeat: no-repeat;
+				background-size:100% 100%;
+				width: 100%;
+				height: 100%;
+				filter: brightness(130%);
+			}
+			#bg_login{
+				background-image :url("images/Login.png");
+				display: block;
+				position: relative;
+				width: 22%;
+				height: 55%;
+				top: 20%;
+				left: 77%;
+				background-repeat: no-repeat; 
+				background-size:100% 100%;
+				opacity:0.8;
+				border-radius: 15px
+			}
+			#logo{
+				background-image :url("images/logo.png");
+				display: block;
+				position: relative;
+				width: 20%;
+				height: 7%;
+				bottom: 275px;
+				left: 78%;
+				background-repeat: no-repeat; 
+				background-size:100% 100%;
+			}
+			#account{
+				bottom: 200px;
+				left: 80%;
+			}
+			#sign_up{
+				bottom: 200px;
+				left: 81%;
+			}
+			#password{
+				bottom: 175px;
+				left: 80%;
+			}
+			#forget{
+				bottom: 175px;
+				left: 81%;
+			}
+			#verification{
+				bottom: 150px;
+				left: 80%;
+			}
+			#verification_image{
+				bottom: 150px;
+				left: 81%;
+			}
+			#signin_btn{
+				bottom: 125px;
+				left: 80%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bg_main">
+			
+			<div id="bg_login"></div>
+			<div id="logo"></div>
+			<div>
+				<div id="account" class="layui-input-inline">
+					<input type="text" name="account" lay-verify="acc" placeholder="Account" autocomplete="off" class="layui-input">
+				</div>
+				<div id="sign_up" class="layui-input-inline">
+					<a href="#">sign up now</a>
+				</div>
+			</div>
+			<div>
+				<div id="password" class="layui-input-inline">
+					<input type="password" name="password" lay-verify="pass" placeholder="Password" autocomplete="off" class="layui-input">
+				</div>
+				<div id="forget" class="layui-input-inline">
+					<a href="#">forget password?</a>
+				</div>
+			</div>
+			<div>
+				<div id="verification" class="layui-input-inline">
+					<input type="text" name="verification" lay-verify="veri" placeholder="verification" autocomplete="off" class="layui-input">
+				</div>
+				<a id="verification_image" class="layui-input-inline" href="#">
+					<image src="images/verificationCode.png">
+				</a>
+			</div>
+			<div>
+				<div id="signin_btn" class="layui-input-inline">
+					<button class="layui-btn layui-btn-lg layui-btn-normal">Sign in</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

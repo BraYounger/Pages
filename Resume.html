@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="layui/css/layui.css"  media="all">
+		<script src="layui/layui.js"></script>
+		<title>Resume</title>
+		<style type="text/css">
+			#container > header{
+				padding: 20px;
+				background: #007fff;
+				color: #fff;
+			}
+			#logo{
+				display: inline-block;
+				position: absolute;
+				width: 200px;
+				height: 40px;
+				top: 2px;
+				left: 1px;
+			}
+			#photo{
+				display: inline-block;
+				width: 80px;
+				height: 80px;
+				top: 2px;
+				left: 1px;
+			}
+			#container > footer{
+				display: block;
+				padding: 20px;
+				text-align: center;
+				background: #666;
+				color: #fff;
+			}
+			#function{
+				display: inline-block;
+				background: #D0D0D0;
+				width: 20%;
+				height: 850px;
+			}
+			#resume_info{
+				display: inline-block;
+			}
+			table{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 8%;
+				table-layout: fixed;
+				
+			}
+			#create{
+				position: absolute;
+				bottom: 5%;
+				left: 45%;
+			}
+			#reset{
+				position: absolute;
+				bottom: 5%;
+				left: 53%;
+			}
+			footer{
+				/* position: absolute; */
+				bottom: 0;
+				width: 100%;
+			}
+			tr,th{
+				white-space: nowrap;
+				width: 500px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="container">
+			<header>
+				<img id="logo" src="images/logo.png" />
+			</header>
+			<div id="function">
+				<button class="layui-btn layui-btn-fluid" style="width: 80%; margin: 10%;">Function1</button>
+				<button class="layui-btn layui-btn-fluid" style="width: 80%; margin: 10%;">Function2</button>
+				<button class="layui-btn layui-btn-fluid" style="width: 80%; margin: 10%;">Function3</button>
+				<button class="layui-btn layui-btn-fluid" style="width: 80%; margin: 10%;">Function4</button>
+			</div>
+			<div id="resume_info">
+				<table border="1">
+					<tr>
+						<th>Last Name,FirstName</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+					<tr>
+						<th>Jpb Title</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+					<tr>
+						<th>JResidence</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+					<tr>
+						<th>Nationality</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+					<tr>
+						<th>Photo</th>
+						<th>
+							<img id="photo" src="images/bg_input.jpg" />
+						</th>
+					</tr>
+					<tr>
+						<th>Profile</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+					<tr>
+						<th>Career</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+					<tr>
+						<th>Industry Experience</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+					<tr>
+						<th>Technical Experience</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+					<tr>
+						<th>Languages</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+					<tr>
+						<th>Project Experience</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+					<tr>
+						<th>Training/Certification</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+					<tr>
+						<th>Education</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+					<tr>
+						<th>Others</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+				</table>
+			</div>
+			<button id="create" class="layui-btn">Create</button>
+			<button id="reset" class="layui-btn layui-btn-warm">Reset</button>
+		</div>
+		<div id="container">
+			<footer>@copyright 2018 belongs to Capgemini</footer>
+		</div>
+	</body>
+</html>
