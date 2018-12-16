@@ -6,6 +6,9 @@
 		<script src="layui/layui.js"></script>
 		<title>Resume</title>
 		<style type="text/css">
+			html{
+				height: 230%;
+			}
 			#container > header{
 				padding: 20px;
 				background: #007fff;
@@ -19,16 +22,11 @@
 				top: 2px;
 				left: 1px;
 			}
-			#photo{
-				display: inline-block;
-				width: 80px;
-				height: 80px;
-				top: 2px;
-				left: 1px;
-			}
 			#container > footer{
 				display: block;
 				padding: 20px;
+				width: 100%;
+				bottom: 0;
 				text-align: center;
 				background: #666;
 				color: #fff;
@@ -37,38 +35,236 @@
 				display: inline-block;
 				background: #D0D0D0;
 				width: 20%;
-				height: 850px;
+				height: 2150px;
 			}
 			#resume_info{
 				display: inline-block;
 			}
-			table{
+			#table_basic{
 				display: inline-block;
 				position: absolute;
 				left: 25%;
 				top: 8%;
 				table-layout: fixed;
-				
+				/* border-color: #F0F0F0; */
+			}
+			#table_basic tr{
+				white-space: nowrap;
+				width: 500px;
+				height: 50px;
+			}
+			#table_basic th{
+				white-space: nowrap;
+				width: 500px;
+				height: 50px;
+			}
+			.label{
+				background-color: #21ABDA;
+			}
+			#table_profile{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 30%;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_profile th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_career{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 41%;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_career th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_career_info{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 46.5%;
+				width: 74.8%;
+				max-width: 1003px;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_career_info th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_industry{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 62.5%;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_industry th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_industry_info{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 68%;
+				width: 74.8%;
+				max-width: 1003px;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_industry_info th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_tech{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 84.5%;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_tech th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_languages{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 106.8%;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_languages th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_languages_info{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 112.5%;
+				max-width: 1003px;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_languages_info th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_project{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 123.7%;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_project th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_date{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 129.4%;
+				max-width: 1003px;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_date th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_project_info{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 135%;
+				max-width: 1003px;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_project_info th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_training{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 157.2%;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_training th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_education{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 173.5%;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_education th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
+			}
+			#table_others{
+				display: inline-block;
+				position: absolute;
+				left: 25%;
+				top: 190%;
+				table-layout: fixed;
+				/* border-color: #F0F0F0; */
+			}
+			#table_others th{
+				white-space: nowrap;
+				width: 1001px;
+				height: 50px;
 			}
 			#create{
 				position: absolute;
-				bottom: 5%;
+				top: 212%;
 				left: 45%;
 			}
 			#reset{
 				position: absolute;
-				bottom: 5%;
-				left: 53%;
+				top: 212%;
+				left: 56%;
 			}
-			footer{
-				/* position: absolute; */
-				bottom: 0;
+			input{
+				border: none;
+				background-color: #E3EEF5;
 				width: 100%;
-			}
-			tr,th{
-				white-space: nowrap;
-				width: 500px;
-				height: 50px;
+				height: 100%;
 			}
 		</style>
 	</head>
@@ -85,97 +281,248 @@
 				<button class="layui-btn layui-btn-fluid" style="width: 80%; margin: 10%;">Function4</button>
 			</div>
 			<div id="resume_info">
-				<table border="1">
+				<table id="table_basic" border="1">
 					<tr>
-						<th>Last Name,FirstName</th>
+						<th class="label">Last Name,FirstName</th>
 						<th>
 							<input type="text" />
 						</th>
 					</tr>
 					<tr>
-						<th>Jpb Title</th>
+						<th class="label">Jpb Title</th>
 						<th>
 							<input type="text" />
 						</th>
 					</tr>
 					<tr>
-						<th>JResidence</th>
+						<th class="label">JResidence</th>
 						<th>
 							<input type="text" />
 						</th>
 					</tr>
 					<tr>
-						<th>Nationality</th>
+						<th class="label">Nationality</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+				</table>
+				<table id="table_profile" border="1">
+					<tr>
+						<th class="label">Profile</th>
+					</tr>
+					<tr>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+				</table>
+				<table id="table_career" border="1">
+					<tr>
+						<th class="label">Career</th>
+					</tr>
+				</table>
+				<table id="table_career_info" border="1">
+					<tr>
+						<th style="width: 30%;">
+							<input type="text"/>
+						</th>
+						<th style="max-width: 70%;">
+							<input type="text"/>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<input type="text"/>
+						</th>
+						<th>
+							<input type="text"/>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<input type="text"/>
+						</th>
+						<th>
+							<input type="text"/>
+						</th>
+					</tr>
+				</table>
+				<table id="table_industry" border="1">
+					<tr>
+						<th class="label">Industry Experience</th>
+					</tr>
+				</table>
+				<table id="table_industry_info" border="1">
+					<tr>
+						<th style="width: 30%;">
+							<input type="text"/>
+						</th>
+						<th>
+							<input type="text"/>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<input type="text"/>
+						</th>
+						<th>
+							<input type="text"/>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<input type="text"/>
+						</th>
+						<th>
+							<input type="text"/>
+						</th>
+					</tr>
+				</table>
+				<table id="table_tech" border="1">
+					<tr>
+						<th class="label">Technical experience</th>
+					</tr>
+					<tr>
 						<th>
 							<input type="text" />
 						</th>
 					</tr>
 					<tr>
-						<th>Photo</th>
-						<th>
-							<img id="photo" src="images/bg_input.jpg" />
-						</th>
-					</tr>
-					<tr>
-						<th>Profile</th>
 						<th>
 							<input type="text" />
 						</th>
 					</tr>
 					<tr>
-						<th>Career</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+				</table>
+				<table id="table_languages" border="1">
+					<tr>
+						<th class="label">
+							Languages
+							<br />
+							The level in speaking, reading or writing is “Excellent”, “Good”, “Fair” or “Poor”
+						</th>
+					</tr>
+				</table>
+				<table id="table_languages_info" border="1">
+					<tr>
+						<th class="label">Language</th>
+						<th class="label">Speak</th>
+						<th class="label">Read</th>
+						<th class="label">Write</th>
+					</tr>
+					<tr>
+						<th>
+							<input type="text" />
+						</th>
+						<th>
+							<input type="text" />
+						</th>
+						<th>
+							<input type="text" />
+						</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+				</table>
+				<table id="table_project" border="1">
+					<tr>
+						<th class="label">Project Experience</th>
+					</tr>
+				</table>
+				<table id="table_date" border="1">
+					<tr>
+						<th class="label" style="width: 15%;">Start Date</th>
+						<th>
+							<input type="text" />
+						</th>
+						<th class="label" style="width: 15%;">End Date</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+				</table>
+				<table id="table_project_info" border="1">
+					<tr>
+						<th class="label" style="width: 15%;">Client</th>
 						<th>
 							<input type="text" />
 						</th>
 					</tr>
 					<tr>
-						<th>Industry Experience</th>
+						<th class="label">Project</th>
 						<th>
 							<input type="text" />
 						</th>
 					</tr>
 					<tr>
-						<th>Technical Experience</th>
+						<th class="label">Role</th>
 						<th>
 							<input type="text" />
 						</th>
 					</tr>
 					<tr>
-						<th>Languages</th>
+						<th class="label">Responsibility</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+				</table>
+				<table id="table_training" border="1">
+					<tr>
+						<th class="label">Training/Certification</th>
+					</tr>
+					<tr>
 						<th>
 							<input type="text" />
 						</th>
 					</tr>
 					<tr>
-						<th>Project Experience</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+				</table>
+				<table id="table_education" border="1">
+					<tr>
+						<th class="label">Education</th>
+					</tr>
+					<tr>
 						<th>
 							<input type="text" />
 						</th>
 					</tr>
 					<tr>
-						<th>Training/Certification</th>
+						<th>
+							<input type="text" />
+						</th>
+					</tr>
+				</table>
+				<table id="table_others" border="1">
+					<tr>
+						<th class="label">Others</th>
+					</tr>
+					<tr>
 						<th>
 							<input type="text" />
 						</th>
 					</tr>
 					<tr>
-						<th>Education</th>
-						<th>
-							<input type="text" />
-						</th>
-					</tr>
-					<tr>
-						<th>Others</th>
 						<th>
 							<input type="text" />
 						</th>
 					</tr>
 				</table>
 			</div>
-			<button id="create" class="layui-btn">Create</button>
-			<button id="reset" class="layui-btn layui-btn-warm">Reset</button>
-		</div>
-		<div id="container">
+			<div>
+				<button id="create" class="layui-btn">Create</button>
+				<button id="reset" class="layui-btn layui-btn-warm">Reset</button>
+			</div>
 			<footer>@copyright 2018 belongs to Capgemini</footer>
 		</div>
 	</body>
